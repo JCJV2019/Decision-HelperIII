@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    @apply m-0 p-0 font-Roboto overflow-auto;
+}
+
+.logo {
+    @apply bg-[url('/public/storage/img/logo.jpg')] bg-cover w-52 h-52 mx-auto;
+}
+
+/* .logo {
+    background-image: url("{{asset('storage/img/logo.jpg')}}");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  } */
+
+header {
+    @apply bg-amber-500 mx-auto overflow-hidden px-4 border-0 py-4 z-10;
+}
+
+.menu-active {
+    @apply bg-gray-100;
+}
+
+menu {
+    @apply fixed top-0 left-0 z-30 w-56 h-full pt-2.5 bg-gray-50 shadow-inner;
+}
+
+menu li a {
+    @apply block ml-0 p-2.5 text-gray-700 no-underline;
+}
+
+menu li a:hover {
+    @apply bg-gray-200
+}
+
+menu {
+    @apply -translate-x-56 transition-all duration-500 ease-linear;
+}
+
+header, main {
+    @apply translate-x-0 transition-all duration-500 ease-linear;
+}
+
+.separador {
+    @apply hidden absolute w-full h-full bg-gray-500 z-20 opacity-50;
+}
+
+.menu-active menu {
+    @apply translate-x-0;
+}
+
+
+.borde-focus:focus {
+    @apply outline-2 outline outline-amber-500 border-0 rounded
+}
+.borde-focus {
+    @apply outline-2 outline outline-gray-100 border-0 rounded
+}
+
+input::placeholder {
+    @apply text-gray-300
+}
+
+
+input[type='radio']:checked {
+    @apply accent-amber-500;
+}
+
